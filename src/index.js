@@ -9,7 +9,10 @@ export default {
         const url = new URL(request.url)
 
         if (whitelistPaths.includes(url.pathname)) {
-            return new Response("FBI, put your hands up 🦀!", { "status": 401 })
+            return new Response(
+                "FBI, put your hands up 🦀! Your ip address is" + request.headers.get('cf-connecting-ip'),
+                { "status": 200 }
+            )
         }
 
         const targetUrl = `https:/${url.pathname}${url.search}`
