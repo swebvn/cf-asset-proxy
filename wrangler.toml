@@ -1,3 +1,4 @@
+account_id = "5c8b583ad4ca045f1e439a11827c730b"
 name = "asset-proxy"
 main = "src/index.js"
 compatibility_date = "2023-05-18"
